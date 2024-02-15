@@ -1,0 +1,7 @@
+https://google.fr
+https://www.axians.fr/fr/
+http://10.1.10.179/glpi/
+https://10.1.10.247/102/deleg/
+http://10.1.10.106:8380/SeditXNetRHSMProd/
+https://portal.eu.xdr.trendmicro.com/#/dashboard
+https://mail.ville-arras.fr

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troublesooting</title>
+        <link rel =stylesheet type= text/css href="{{url_for("static", filename="style.css")}}">
+    </head>
+    <body>
+        <img class= "axians" src="{{url_for("static",filename="axians.png")}}"/>
+        <h1 class= "app"> Client {{nomc}}</h1>
+        <h2>Test Pre</h2>
+        <table>
+            <thead>
+                <TR>
+                    <TD> ID du test </TD>
+                    <TD> Date et heure du test  </TD>
+                    <TD> Actions </TD>
+                </TR>
+            </thead>
+            <tbody>
+                {% for item in pre %}
+                <TR>
+                    <TD>{{item.ID}}</TD>
+                    <TD>{{item.DATE}}</TD>
+                    <TD><form action="{{url_for('test',  cname = nomc, type = 'pre', id = item.ID)}}"><button name="details" type="submit">Details du test</button></form></TD>
+                </TR>
+                {% endfor %}
+            <tbody>
+        </table>
+        <h2>Test POST</h2>
+        <table>
+            <thead>
+                <TR>
+                    <TD> ID du test </TD>
+                    <TD> Date et heure du test  </TD>
+                    <TD> Actions </TD>
+                </TR>
+            </thead>
+            <tbody>
+                {% for item in post %}
+                <TR>
+                    <TD>{{item.ID}}</TD>
+                    <TD>{{item.DATE}}</TD>
+                    <TD><form action="{{url_for('test',  cname = nomc, type = 'post', id = item.ID)}}"><button name="details" type="submit">Details du test</button></form></TD>
+                </TR>
+                {% endfor %}
+            <tbody>
+        </table>
+        <h4>Comparaison</h4>
+        <form action="{{url_for('compare', cname = nomc)}}" method="GET">
+            <label for="pre">Choisir un test pre</label>
+            <select name ='pre' id='pre'>
+                {% for item in pre  %}
+                    <option value= "{{item.ID}}" SELECTED>{{item.ID}}</option>"
+                {% endfor %}
+            </select>
+            <label for="post">Choisir un test post</label>
+            <select name ='post' id='post'>
+                {% for item2 in post %}
+                    <option value= "{{item2.ID}}" SELECTED>{{item2.ID}}</option>"
+                {% endfor %}
+            </select>
+            <input type=submit value="comparer">
+        </form>
+        <h4>Delta</h4>
+        <form action="{{url_for('delta', cname = nomc)}}" method="GET">
+            <label for="pre1">Choisir un test pre</label>
+            <select name ='pre' id='pre1'>
+                {% for item in pre  %}
+                    <option value= "{{item.ID}}" SELECTED>{{item.ID}}</option>"
+                {% endfor %}
+            </select>
+            <label for="post1">Choisir un test post</label>
+            <select name ='post' id='post1'>
+                {% for item2 in post %}
+                    <option value= "{{item2.ID}}" SELECTED>{{item2.ID}}</option>"
+                {% endfor %}
+            </select>
+            <input type=submit value="Afficher le Delta">
+        </form>
+    </body>
+</html>

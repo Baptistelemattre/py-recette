@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troublesooting</title>
+        <link rel = stylesheet type= text/css href= "{{ url_for("static", filename="style.css")}}">
+    </head>
+    <body>
+        <img class= "axians" src="{{url_for("static",filename="axians.png")}}"/>
+        <h1 class="app"> Client : {{cname}} </h1>
+        <h3 class="app"> Delta </h3>
+        <P><h3 class= "app">Test pre : {{id_pre}}</h3><h3 class= "app">Test post : {{id_post}}</h3></p>
+        <h4 class"app">Test URL </h4> 
+            <table>
+                <thead>
+                    {% for item in col_url %}
+                    <TD>{{item}}</TD>
+                    {% endfor %}
+                </thead>
+                <tbody>
+                    {% for item in ligne_url %}
+                    <TR>
+                        <TD>{{item.typeTest}}</TD>
+                        <TD>{{item.url}}</TD>
+                        <TD>{{item.port}}</TD>
+                        <TD class= {{item.result}}>{{item.result}}</TD>
+                    </TR>
+                    {% endfor %}
+                <tbody>
+            </table>
+        </div>
+        <h4 class"app">Test Application </h4> 
+            <table>
+                <thead>
+                    {% for item in col_app %}
+                    <TD>{{item}}</TD>
+                    {% endfor %}
+                </thead>
+                <tbody>
+                    {% for item in ligne_app %}
+                    <TR>
+                        <TD>{{item.typeTest}}</TD>
+                        <TD>{{item.ip}}</TD>
+                        <TD>{{item.port}}</TD>
+                        <TD class= {{item.result}}>{{item.result}}</TD>
+                    </TR>
+                    {% endfor %}
+                <tbody>
+            </table>
+        <h4 class"app">Test IP </h4> 
+            <table>
+                <thead>
+                    {% for item in col_ip %}
+                    <TD>{{item}}</TD>
+                    {% endfor %}
+                </thead>
+                <tbody>
+                    {% for item in ligne_ip %}
+                    <TR>
+                        <TD>{{item.typeTest}}</TD>
+                        <TD>{{item.desc}}</TD>
+                        <TD>{{item.ip}}</TD>
+                        <TD>{{item.port}}</TD>
+                        <TD class= {{item.result}}>{{item.result}}</TD>
+                    </TR>
+                    {% endfor %}
+                <tbody>
+            </table>
+    </body>
+</html>

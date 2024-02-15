@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Troublesooting</title>
+        <link rel = stylesheet type= text/css href= "{{ url_for("static", filename="style.css") }}">
+    </head>
+    <body>
+        <img class= "axians" src="{{url_for("static",filename="axians.png")}}"/>
+        <h1 class= "app"> Troubleshooting Recette </h1>
+        <form action="{{url_for('client')}}" method="GET">
+            <select name ='nomc' id='nomc'>
+                {% for db in dbs %}
+                    <option value= "{{db}}" SELECTED>{{db}}</option>"
+                {% endfor %}
+            </select>
+            <input type=submit value="Valider">
+        </form>
+    </body>
+</html>

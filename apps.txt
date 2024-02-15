@@ -1,0 +1,2 @@
+8.8.8.8:443 GOOGLE_HTTPS
+speedtest.tele2.net:21 FTP_INTERNET

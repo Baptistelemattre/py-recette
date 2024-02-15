@@ -1,0 +1,44 @@
+html, body, div, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    background-color: #000;
+    color: whitesmoke;
+}
+.app{
+    text-align: center;
+}
+.axians{
+    width: 20%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+thead{
+    background-color: whitesmoke;
+    color: black;
+}
+table{
+    text-align: center;
+}
+.flex{
+    display: flexbox;
+    align-items: center;
+}
+.OK{
+    color: green;
+    font-style: bold;
+}
+.NOK{
+    color: red;
+}

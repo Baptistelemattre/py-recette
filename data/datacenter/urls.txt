@@ -1,0 +1,5 @@
+https://opentouch1.decathlon.axiansnord.fr
+https://opentouch2.decathlon.axiansnord.fr
+https://manager.axiansnord.fr/p/login/
+https://analyzer.axiansnord.fr:10443
+https://portailguest.axiansnord.fr/
